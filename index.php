@@ -37,6 +37,10 @@
 
         output_red.innerHTML = slider_red.value;
 
+        slider_red.onload = function () {
+            output_red.innerHTML = this.value;
+        }
+
         slider_red.oninput = function () {
             output_red.innerHTML = this.value;
         }
