@@ -62,7 +62,7 @@ $temps = round(microtime(true) - $start, 3);
 
 imagestring($img, 3, 1, 1, $temps, $white);
 
-header('Content-type: image/png');
+//header('Content-type: image/png');
 
 imagepng($img);
 imagedestroy($img);
