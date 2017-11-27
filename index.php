@@ -21,11 +21,11 @@
         <input type="number" value="2" min="1" name="k">
     </div>
     <div class="form-group">
-        <label class="form-label">Rouge : <p id="redValue">50</p></label>
+        <label class="form-label">Rouge : <label id="redValue">50</label></label>
         <input type="range" min="1" max="255" value="50" name="red" class="slider" id="redRange">
     </div>
     <div class="form-group">
-        <label class="form-label">Vert : <p id="greenValue">50</p></label>
+        <label class="form-label">Vert : <label id="greenValue">50</label></label>
         <input type="range" min="1" max="255" value="50" name="green" class="slider" id="greenRange">
     </div>
     <div class="form-group">
