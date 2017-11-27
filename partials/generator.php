@@ -1,12 +1,13 @@
 <?php
 
 $iteration_n = ((isset($_POST['n'])) ? $_POST['n']:50);
+$degree_k = ((isset($_POST['k'])) ? $_POST['k']:2);
 
 $zoom = 200;
 
-$min_x = -4.1; //ab min
+$min_x = -2.1; //ab min
 $max_x = 0.6; //ab max
-$min_y = -2.2; //ord min
+$min_y = -1.2; //ord min
 $max_y = 1.2; //ord max
 
 $img_width = ($max_x - $min_x) * $zoom;
@@ -38,7 +39,7 @@ for ($x = 0; $x < $img_width; $x++) {
         do {
             $tmp = $z_r;
             $z_r = $z_r * $z_r - $z_i * $z_i + $c_r;
-            $z_i = 2 * $tmp * $z_i + $c_i;
+            $z_i = $degree_k * $tmp * $z_i + $c_i;
             $i++;
         } while ($z_r * $z_r + $z_i * $z_i < 4 && $i < $iteration_n);
 
