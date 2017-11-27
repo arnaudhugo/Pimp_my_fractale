@@ -78,8 +78,8 @@
     var button = document.getElementById("buttonSub");
     
     button.onclick = function () {
-        form.style.visibility = "hidden";
-        loader.style.visibility = "visible";
+        form.style.opacity = 0;
+        loader.style.opacity = 1;
     }
     
 </script>
