@@ -26,11 +26,11 @@ $black = imagecolorallocate($img, 0, 0, 0);
 imagefill($img, 0, 0, $white); //img background default
 
 $colors = array();
-for ($i = 0; $i < ($iteration_n / 2); $i++) {
+for ($i = 0; $i < $iteration_n; $i++) {
     $colors[$i] = imagecolorallocate($img, 0, $i * 255 / $iteration_n, 0);
 }
 
-var_dump($colors);
+echo var_dump($colors);
 
 $start = microtime(true);
 
