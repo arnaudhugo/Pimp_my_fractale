@@ -51,9 +51,9 @@ for ($x = 0; $x < $img_width; $x++) {
         }
 
         if ($i == $iteration_n) {
-            imagesetpixel($img, $x, $y, $colors[$i]);
-        } else {
             imagesetpixel($img, $x, $y, $black);
+        } else {
+            imagesetpixel($img, $x, $y, $colors[$i]);
         }
     }
 }
