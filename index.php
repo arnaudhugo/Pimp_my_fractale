@@ -29,7 +29,7 @@
         <input type="range" min="1" max="255" value="50" name="green" class="slider" id="greenRange">
     </div>
     <div class="form-group">
-        <label class="form-label">Bleu : <p id="blueValue">50</p></label>
+        <label class="form-label">Bleu : <label id="blueValue">50</label></label>
         <input type="range" min="1" max="255" value="50" name="blue" class="slider" id="blueRange">
     </div>
     <div class="form-group">
