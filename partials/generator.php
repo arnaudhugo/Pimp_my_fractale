@@ -7,12 +7,12 @@ $red_value = ((isset($_POST['red'])) ? $_POST['red'] : 125);
 $green_value = ((isset($_POST['green'])) ? $_POST['green'] : 125);
 $blue_value = ((isset($_POST['blue'])) ? $_POST['blue'] : 125);
 
-$zoom = 200;
+$zoom = 300;
 
-$min_x = -6; //ab min
-$max_x = 6; //ab max
-$min_y = -6; //ord min
-$max_y = 6; //ord max
+$min_x = -2.1; //ab min
+$max_x = 2.1; //ab max
+$min_y = -1.2; //ord min
+$max_y = 1.2; //ord max
 
 $img_width = ($max_x - $min_x) * $zoom;
 $img_height = ($max_y - $min_y) * $zoom;
