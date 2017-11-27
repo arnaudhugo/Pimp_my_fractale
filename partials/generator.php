@@ -8,6 +8,8 @@ if (isset($_POST['n']) && isset($_POST['k'])) {
     $iteration_n = 50;
 }
 
+echo $iteration_n;
+
 $min_x = -2.1; //ab min
 $max_x = 0.6; //ab max
 $min_y = -1.2; //ord min
