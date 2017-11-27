@@ -62,18 +62,17 @@ $temps = round(microtime(true) - $start, 3);
 
 imagestring($img, 3, 1, 1, $temps, $white);
 
-header('Content-type: image/png');
-
-imagepng($img);
-
 ?>
-<html>
-<body>
-<div id="sampleDiv" style="width: 100px; background-color: Gray;">
-    Zoom Me
-</div>
-<button onclick="img.style.zoom='300%'">Zoom 300%</button>
-<button onclick="img.style.zoom='200%'">Zoom 200%</button>
-<button onclick="img.style.zoom='100%'">Zoom 100%</button>
-</body>
-</html>
+    <html>
+    <body>
+    <div id="sampleDiv" style="width: 100px; background-color: Gray;">
+        <img src="<?php imagepng($img); ?>">
+    </div>
+    <button onclick="img.style.zoom='300%'">Zoom 300%</button>
+    <button onclick="img.style.zoom='200%'">Zoom 200%</button>
+    <button onclick="img.style.zoom='100%'">Zoom 100%</button>
+    </body>
+    </html>
+<?php
+header('Content-type: image/png');
+?>
