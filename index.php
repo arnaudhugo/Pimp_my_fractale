@@ -21,11 +21,11 @@
         <input type="number" value="2" min="1" name="k">
     </div>
     <div class="form-group">
-        <label class="form-label">Couleur rouge : <p id="redValue">50</p></label>
+        <label class="form-label">Couleur rouge : <p id="redValue"><?php ((isset($_POST['blue'])) ? $_POST['blue']:125); ?></p></label>
         <input type="range" min="1" max="255" value="<?php ((isset($_POST['red'])) ? $_POST['red']:125); ?>" name="red" class="slider" id="redRange">
     </div>
     <div class="form-group">
-        <label class="form-label">Couleur bleu : <p id="blueValue">50</p></label>
+        <label class="form-label">Couleur bleu : <p id="blueValue"><?php ((isset($_POST['blue'])) ? $_POST['blue']:125); ?></p></label>
         <input type="range" min="1" max="255" value="<?php ((isset($_POST['blue'])) ? $_POST['blue']:125); ?>" name="blue" class="slider" id="blueRange">
     </div>
     <div class="form-group">
