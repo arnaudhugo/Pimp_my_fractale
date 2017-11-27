@@ -22,9 +22,9 @@ imagefill($img, 0, 0, $white); //img background default
 
 $colors = array();
 for ($i = 0; $i < $iteration_n; $i++) {
-    $randcolor = rand(0, 255);
-    $colors[$i] = imagecolorallocate($img, $randcolor, $randcolor, $randcolor);
-    //$i * 255 / $iteration_n
+    $rand_red = rand(0, 255);
+    $rand_blue = rand(0, 255);
+    $colors[$i] = imagecolorallocate($img, $rand_red, $i * 255 / $iteration_n, $rand_blue);
 }
 
 $start = microtime(true);
