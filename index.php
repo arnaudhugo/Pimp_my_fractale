@@ -40,7 +40,7 @@
     </div>
 </form>
 
-<div class="loader"></div>
+<div id="load" class="loader"></div>
 
 <script type="text/javascript">
     var slider_red = document.getElementById("redRange");
@@ -74,7 +74,7 @@
 </script>
 <script type="text/javascript">
     var form = document.getElementById("form");
-    var loader = document.getElementsByClassName("loader");
+    var loader = document.getElementById("load");
     var button = document.getElementById("buttonSub");
     
     button.onclick = function () {
