@@ -18,6 +18,9 @@ $zoom = 100;
 $img_width = ($max_x - $min_x) * $zoom;
 $img_height = ($max_y - $min_y) * $zoom;
 
+echo $img_width;
+echo $img_height;
+
 $img = imagecreatetruecolor($img_width, $img_height);
 
 $white = imagecolorallocate($img, 255, 255, 255);
@@ -29,8 +32,6 @@ $colors = array();
 for ($i = 0; $i < $iteration_n; $i++) {
     $colors[$i] = imagecolorallocate($img, 0, $i * 255 / $iteration_n, 0);
 }
-
-echo var_dump($colors);
 
 $start = microtime(true);
 
