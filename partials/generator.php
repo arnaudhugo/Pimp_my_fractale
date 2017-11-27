@@ -18,8 +18,6 @@ $zoom = 100;
 $img_width = ($max_x - $min_x) * $zoom;
 $img_height = ($max_y - $min_y) * $zoom;
 
-
-echo "a";
 $img = @imagecreatetruecolor($img_width, $img_height) or die("Erreur lors de la creation de l'image");
 
 $white = imagecolorallocate($img, 255, 255, 255);
