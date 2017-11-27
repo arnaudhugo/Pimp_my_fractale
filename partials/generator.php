@@ -66,4 +66,6 @@ header('Content-type: image/png');
 
 imagepng($img, "../partials/fractal.png");
 
+header("Location: fractale_gen.html");
+
 
