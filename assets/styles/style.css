@@ -111,10 +111,10 @@ html, body {
     }
 }
 
-#buttonSub:active .loader {
+#buttonSub:checked .loader {
     visibility: visible;
 }
 
-#buttonSub:active #form {
+#buttonSub:checked #form {
     visibility: hidden;
 }
