@@ -18,7 +18,7 @@ $zoom = 100;
 $img_width = ($max_x - $min_x) * $zoom;
 $img_height = ($max_y - $min_y) * $zoom;
 
-$img = imagecreatetruecolor($img_width, $img_height);
+$img = imagecreate($img_width, $img_height);
 
 echo "a";
 
