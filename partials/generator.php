@@ -10,7 +10,7 @@ $blue_value = ((isset($_POST['blue'])) ? $_POST['blue'] : 125);
 $zoom = 200;
 
 $min_x = -2.1; //ab min
-$max_x = 0.6; //ab max
+$max_x = 2.1; //ab max
 $min_y = -1.2; //ord min
 $max_y = 1.2; //ord max
 
