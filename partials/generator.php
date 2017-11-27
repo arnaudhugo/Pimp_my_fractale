@@ -18,10 +18,8 @@ $zoom = 100;
 $img_width = ($max_x - $min_x) * $zoom;
 $img_height = ($max_y - $min_y) * $zoom;
 
-
-
 $img = imagecreatetruecolor($img_width, $img_height);
-echo $img_height;
+echo $img;
 $white = imagecolorallocate($img, 255, 255, 255);
 $black = imagecolorallocate($img, 0, 0, 0);
 
