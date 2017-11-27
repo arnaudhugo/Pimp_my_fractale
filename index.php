@@ -22,11 +22,11 @@
     </div>
     <div class="form-group">
         <label class="form-label">Couleur rouge : <p id="redValue">50</p></label>
-        <input type="range" min="1" max="255" value="125" name="red" class="slider" id="redRange">
+        <input type="range" min="1" max="255" value="<?php ((isset($_POST['red'])) ? $_POST['red']:125); ?>" name="red" class="slider" id="redRange">
     </div>
     <div class="form-group">
         <label class="form-label">Couleur bleu : <p id="blueValue">50</p></label>
-        <input type="range" min="1" max="255" value="125" name="blue" class="slider" id="blueRange">
+        <input type="range" min="1" max="255" value="<?php ((isset($_POST['blue'])) ? $_POST['blue']:125); ?>" name="blue" class="slider" id="blueRange">
     </div>
     <div class="form-group">
         <input type="submit" value="Valider">
@@ -34,18 +34,18 @@
     <script type="text/javascript">
         var slider_red = document.getElementById("redRange");
         var output_red = document.getElementById("redValue");
-        output_red.innerHTML = slider_red.value;
 
-        slider_red.oninput = function() {
-            output_red.innerHTML = this.value;
-        }
-    </script>
-    <script type="text/javascript">
         var slider_blue = document.getElementById("blueRange");
         var output_blue = document.getElementById("blueValue");
+
+        output_red.innerHTML = slider_red.value;
         output_blue.innerHTML = slider_blue.value;
 
-        slider_blue.oninput = function() {
+        slider_red.oninput = function () {
+            output_red.innerHTML = this.value;
+        }
+
+        slider_blue.oninput = function () {
             output_blue.innerHTML = this.value;
         }
     </script>
