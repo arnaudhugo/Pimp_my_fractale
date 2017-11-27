@@ -1,11 +1,12 @@
 <?php
 
 $iteration_n = ((isset($_POST['n'])) ? $_POST['n']:50);
-$zoom = ((isset($_POST['zoom'])) ? $_POST['zoom']:100);
 
-$min_x = -2.1; //ab min
+$zoom = 400;
+
+$min_x = -4.1; //ab min
 $max_x = 0.6; //ab max
-$min_y = -1.2; //ord min
+$min_y = -2.2; //ord min
 $max_y = 1.2; //ord max
 
 $img_width = ($max_x - $min_x) * $zoom;
