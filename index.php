@@ -65,7 +65,7 @@
             output_blue.innerHTML = this.value;
         }
 
-        document.getElementById("colorPreview").style.backgroundColor = "green";
+        document.getElementById("colorPreview").style.backgroundColor = "color(255,20,255)";
     </script>
 </form>
 </body>
