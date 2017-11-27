@@ -13,6 +13,7 @@ html, body {
 
 /* -- FORM -- */
 #form {
+    visibility: visible;
     position: fixed;
     padding: 20px;
     top: 50%;
@@ -112,4 +113,8 @@ html, body {
 
 #buttonSub:active .loader {
     visibility: visible;
+}
+
+#buttonSub:active #form {
+    visibility: hidden;
 }
