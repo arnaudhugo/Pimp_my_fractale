@@ -4,6 +4,7 @@ $iteration_n = ((isset($_POST['n'])) ? $_POST['n'] : 50);
 $degree_k = ((isset($_POST['k'])) ? $_POST['k'] : 2);
 
 $red_value = ((isset($_POST['red'])) ? $_POST['red'] : 125);
+$green_value = ((isset($_POST['green'])) ? $_POST['green'] : 125);
 $blue_value = ((isset($_POST['blue'])) ? $_POST['blue'] : 125);
 
 $zoom = 200;

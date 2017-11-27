@@ -21,16 +21,21 @@
         <input type="number" value="2" min="1" name="k">
     </div>
     <div class="form-group">
-        <label class="form-label">Couleur rouge : <p id="redValue">50</p></label>
+        <label class="form-label">Rouge : <p id="redValue">50</p></label>
         <input type="range" min="1" max="255" value="50" name="red" class="slider" id="redRange">
     </div>
     <div class="form-group">
-        <label class="form-label">Couleur bleu : <p id="blueValue">50</p></label>
+        <label class="form-label">Vert : <p id="greenValue">50</p></label>
+        <input type="range" min="1" max="255" value="50" name="green" class="slider" id="greenRange">
+    </div>
+    <div class="form-group">
+        <label class="form-label">Bleu : <p id="blueValue">50</p></label>
         <input type="range" min="1" max="255" value="50" name="blue" class="slider" id="blueRange">
     </div>
     <div class="form-group">
         <input type="submit" value="Valider">
     </div>
+
     <script type="text/javascript">
         var slider_red = document.getElementById("redRange");
         var output_red = document.getElementById("redValue");
@@ -39,6 +44,17 @@
 
         slider_red.oninput = function () {
             output_red.innerHTML = this.value;
+        }
+
+    </script>
+    <script type="text/javascript">
+        var slider_green = document.getElementById("greenRange");
+        var output_green = document.getElementById("greenValue");
+
+        output_green.innerHTML = slider_green.value;
+
+        slider_green.oninput = function () {
+            output_green.innerHTML = this.value;
         }
 
     </script>
