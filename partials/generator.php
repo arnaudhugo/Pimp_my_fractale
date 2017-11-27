@@ -39,14 +39,15 @@ for ($x = 0; $x < $img_width; $x++) {
         do {
             $tmp = $z_r;
             $z_r = $z_r * $z_r - $z_i * $z_i + $c_r;
-            $z_i = $degree_k * $tmp * $z_i + $c_i;
+            $z_i = 2 * $tmp * $z_i + $c_i;
             $i++;
         } while ($z_r * $z_r + $z_i * $z_i < 4 && $i < $iteration_n);
 
         if ($i == $iteration_n) {
             imagesetpixel($img, $x, $y, $black);
         } else {
-            imagesetpixel($img, $x, $y, $colors[$i]);
+            $randcolor = random_int(0, $iteration_n - 1);
+            imagesetpixel($img, $x, $y, $colors[$randcolor]);
         }
     }
 }
