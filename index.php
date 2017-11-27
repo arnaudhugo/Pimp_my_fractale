@@ -33,7 +33,7 @@
         <input type="range" min="1" max="255" value="50" name="blue" class="slider" id="blueRange">
     </div>
     <div class="form-group">
-        <div id="colorPreview" style="height: 20px; background-color: transparent; border: 1px solid #161616;"></div>
+        <div id="colorPreview" style="height: 20px; background-color: transparent;"></div>
     </div>
     <div class="form-group">
         <input type="submit" value="Valider">
