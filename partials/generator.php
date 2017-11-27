@@ -3,6 +3,9 @@
 $iteration_n = ((isset($_POST['n'])) ? $_POST['n']:50);
 $degree_k = ((isset($_POST['k'])) ? $_POST['k']:2);
 
+$red_value = ((isset($_POST['red'])) ? $_POST['red']:125);
+$blue_value = ((isset($_POST['blue'])) ? $_POST['blue']:125);
+
 $zoom = 200;
 
 $min_x = -2.1; //ab min
@@ -22,9 +25,7 @@ imagefill($img, 0, 0, $white); //img background default
 
 $colors = array();
 for ($i = 0; $i < $iteration_n; $i++) {
-    $rand_red = rand(0, 125);
-    $rand_blue = rand(0, 255);
-    $colors[$i] = imagecolorallocate($img, $rand_red, $i * 255 / $iteration_n, $rand_blue);
+    $colors[$i] = imagecolorallocate($img, $red_value, $i * 255 / $iteration_n, $blue_value);
 }
 
 $start = microtime(true);
