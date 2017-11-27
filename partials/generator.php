@@ -46,7 +46,7 @@ for ($x = 0; $x < $img_width; $x++) {
         if ($i == $iteration_n) {
             imagesetpixel($img, $x, $y, $black);
         } else {
-            $randcolor = random_int(0, 255);
+            $randcolor = rand(0, 255);
             imagesetpixel($img, $x, $y, $colors[$randcolor]);
         }
     }
