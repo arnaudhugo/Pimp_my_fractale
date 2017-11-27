@@ -61,6 +61,5 @@ for ($x = 0; $x < $img_width; $x++) {
 $temps = round(microtime(true) - $start, 3);
 
 imagestring($img, 3, 1, 1, $temps, $white);
-
-imagepng($img, "../assets/images/fractal_generated/fractal.png");
-header("Location: fractal.html");
+imagepng($img);
+imagedestroy($img);
