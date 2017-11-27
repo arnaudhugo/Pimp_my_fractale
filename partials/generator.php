@@ -7,7 +7,7 @@ $red_value = ((isset($_POST['red'])) ? $_POST['red'] : 125);
 $green_value = ((isset($_POST['green'])) ? $_POST['green'] : 125);
 $blue_value = ((isset($_POST['blue'])) ? $_POST['blue'] : 125);
 
-$zoom = 300;
+$zoom = 500;
 
 $min_x = -2.1; //ab min
 $max_x = 2.1; //ab max
@@ -66,5 +66,3 @@ header('Content-type: image/png');
 
 imagepng($img);
 imagedestroy($img);
-
-include_once '../index.php';
