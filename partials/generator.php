@@ -13,7 +13,7 @@ $max_x = 0.6; //ab max
 $min_y = -1.2; //ord min
 $max_y = 1.2; //ord max
 
-$zoom = 100;
+$zoom = 200;
 
 $img_width = ($max_x - $min_x) * $zoom;
 $img_height = ($max_y - $min_y) * $zoom;
