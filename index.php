@@ -55,18 +55,20 @@
 
         slider_red.oninput = function () {
             output_red.innerHTML = this.value;
+            document.getElementById("colorPreview").style.backgroundColor = "rgb(" + slider_red.value + "," + slider_green.value + "," + slider_blue.value + ")";
         }
 
         slider_green.oninput = function () {
             output_green.innerHTML = this.value;
+            document.getElementById("colorPreview").style.backgroundColor = "rgb(" + slider_red.value + "," + slider_green.value + "," + slider_blue.value + ")";
         }
 
         slider_blue.oninput = function () {
             output_blue.innerHTML = this.value;
+            document.getElementById("colorPreview").style.backgroundColor = "rgb(" + slider_red.value + "," + slider_green.value + "," + slider_blue.value + ")";
         }
 
-        document.getElementById("colorPreview").style.backgroundColor = "rgb(" + slider_red.value + "," + slider_green.value + "," + slider_blue.value + ")";
-    </script>
+        </script>
 </form>
 </body>
 </html>
