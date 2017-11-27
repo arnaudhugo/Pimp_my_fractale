@@ -20,8 +20,6 @@ $img_height = ($max_y - $min_y) * $zoom;
 
 $img = imagecreatetruecolor($img_width, $img_height);
 
-echo "a";
-
 $white = imagecolorallocate($img, 255, 255, 255);
 $black = imagecolorallocate($img, 0, 0, 0);
 
@@ -61,7 +59,8 @@ for ($x = 0; $x < $img_width; $x++) {
 $temps = round(microtime(true) - $start, 3);
 
 imagestring($img, 3, 1, 1, $temps, $white);
+
+header('Content-type: image/png');
+
 imagepng($img);
 imagedestroy($img);
-
-header('Content-type: image/jpg');
