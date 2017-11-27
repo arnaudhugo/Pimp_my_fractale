@@ -22,7 +22,7 @@ imagefill($img, 0, 0, $white); //img background default
 
 $colors = array();
 for ($i = 0; $i < $iteration_n; $i++) {
-    $rand_red = rand(0, 255);
+    $rand_red = rand(0, 125);
     $rand_blue = rand(0, 255);
     $colors[$i] = imagecolorallocate($img, $rand_red, $i * 255 / $iteration_n, $rand_blue);
 }
