@@ -72,5 +72,16 @@
     }
 
 </script>
+<script type="text/javascript">
+    var form = document.getElementById("form");
+    var loader = document.getElementsByClassName("loader");
+    var button = document.getElementById("buttonSub");
+    
+    button.onclick = function () {
+        form.style.visibility = "hidden";
+        loader.style.visibility = "visible";
+    }
+    
+</script>
 </body>
 </html>

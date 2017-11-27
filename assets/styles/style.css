@@ -110,11 +110,3 @@ html, body {
         transform: rotate(360deg);
     }
 }
-
-#buttonSub:checked .loader {
-    visibility: visible;
-}
-
-#buttonSub:checked #form {
-    visibility: hidden;
-}
