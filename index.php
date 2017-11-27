@@ -49,8 +49,6 @@
         var slider_blue = document.getElementById("blueRange");
         var output_blue = document.getElementById("blueValue");
 
-        var colorPreview = document.getElementById("colorPreview");
-
         output_red.innerHTML = slider_red.value;
         output_green.innerHTML = slider_green.value;
         output_blue.innerHTML = slider_blue.value;
@@ -67,7 +65,7 @@
             output_blue.innerHTML = this.value;
         }
 
-        colorPreview.style.backgroundColor.set(slider_red.value, slider_green.value, slider_blue.value);
+        document.getElementById("colorPreview").style.backgroundColor = "green";
     </script>
 </form>
 </body>
