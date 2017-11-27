@@ -46,7 +46,7 @@ for ($x = 0; $x < $img_width; $x++) {
             $z_r = $z_r * $z_r - $z_i * $z_i + $c_r;
             $z_i = 2 * $tmp * $z_i + $c_i;
             $i++;
-        } while ($z_r * $z_r + $z_i * $z_i < 4 AND $i < $iteration_n);
+        } while ($z_r * $z_r + $z_i * $z_i < 4 && $i < $iteration_n);
 
         if ($i == $iteration_n) {
             imagesetpixel($img, $x, $y, $black);
@@ -60,5 +60,4 @@ $temps = round(microtime(true) - $start, 3);
 
 imagestring($img, 3, 1, 1, $temps, $white);
 
-header('Content-type: img/png');
-imagepng($img);
+imagepng($img, "../assets/images/fractal_generated/fractal.png");
