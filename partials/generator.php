@@ -22,7 +22,9 @@ imagefill($img, 0, 0, $white); //img background default
 
 $colors = array();
 for ($i = 0; $i < $iteration_n; $i++) {
-    $colors[$i] = imagecolorallocate($img, 0, $i * 255 / $iteration_n, 0);
+    $randcolor = rand(0, 255);
+    $colors[$i] = imagecolorallocate($img, $randcolor, $randcolor, $randcolor);
+    //$i * 255 / $iteration_n
 }
 
 $start = microtime(true);
@@ -46,8 +48,7 @@ for ($x = 0; $x < $img_width; $x++) {
         if ($i == $iteration_n) {
             imagesetpixel($img, $x, $y, $black);
         } else {
-            $randcolor = rand(0, $iteration_n - 1);
-            imagesetpixel($img, $x, $y, $colors[$randcolor]);
+            imagesetpixel($img, $x, $y, $colors[$i]);
         }
     }
 }
