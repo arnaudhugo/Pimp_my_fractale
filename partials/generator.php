@@ -2,7 +2,7 @@
 
 $iteration_n = ((isset($_POST['n'])) ? $_POST['n']:50);
 
-$zoom = 400;
+$zoom = 200;
 
 $min_x = -4.1; //ab min
 $max_x = 0.6; //ab max
