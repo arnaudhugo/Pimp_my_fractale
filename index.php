@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
 </head>
 <body>
+<div id="load" class="loader"></div>
+
 <form id="form" action="partials/generator.php" method="POST">
     <div class="form-group">
         <label class="form-label">Nombre d'itération :</label>
@@ -39,8 +41,6 @@
         <input id="buttonSub" type="submit" value="Valider">
     </div>
 </form>
-
-<div id="load" class="loader"></div>
 
 <script type="text/javascript">
     var slider_red = document.getElementById("redRange");
