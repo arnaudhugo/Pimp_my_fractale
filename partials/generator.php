@@ -18,12 +18,9 @@ $zoom = 100;
 $img_width = ($max_x - $min_x) * $zoom;
 $img_height = ($max_y - $min_y) * $zoom;
 
-$img = imagecreatetruecolor($img_width, $img_height);
-if($img) {
-    echo "Succes";
-} else {
-    echo "Error";
-}
+header ('Content-Type: image/png');
+
+$img = @imagecreatetruecolor($img_width, $img_height) or die("Erreur lors de la creation de l'image");
 
 $white = imagecolorallocate($img, 255, 255, 255);
 $black = imagecolorallocate($img, 0, 0, 0);
