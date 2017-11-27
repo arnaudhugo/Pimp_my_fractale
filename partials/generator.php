@@ -1,10 +1,10 @@
 <?php
 
-$iteration_n = ((isset($_POST['n'])) ? $_POST['n']:50);
-$degree_k = ((isset($_POST['k'])) ? $_POST['k']:2);
+$iteration_n = ((isset($_POST['n'])) ? $_POST['n'] : 50);
+$degree_k = ((isset($_POST['k'])) ? $_POST['k'] : 2);
 
-$red_value = ((isset($_POST['red'])) ? $_POST['red']:125);
-$blue_value = ((isset($_POST['blue'])) ? $_POST['blue']:125);
+$red_value = ((isset($_POST['red'])) ? $_POST['red'] : 125);
+$blue_value = ((isset($_POST['blue'])) ? $_POST['blue'] : 125);
 
 $zoom = 200;
 
@@ -39,12 +39,15 @@ for ($x = 0; $x < $img_width; $x++) {
         $z_i = 0;
         $i = 0;
 
-        do {
-            $tmp = $z_r;
-            $z_r = $z_r * $z_r - $z_i * $z_i + $c_r;
-            $z_i = 2 * $tmp * $z_i + $c_i;
+        while ($z_r * $z_r + $z_i * $z_i < 4 && $i < $iteration_n) {
+
+            $mod = sqrt(($z_r * $z_r) + ($z_i * $z_i));
+            $arg = atan2($z_i, $z_r);
+            $z_r = pow($mod, $degree_k) * cos($degree_k * $arg) + $c_r;
+            $z_i = pow($mod, $degree_k) * sin($degree_k * $arg) + $c_i;
+
             $i++;
-        } while ($z_r * $z_r + $z_i * $z_i < 4 && $i < $iteration_n);
+        }
 
         if ($i == $iteration_n) {
             imagesetpixel($img, $x, $y, $black);

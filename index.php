@@ -35,10 +35,8 @@
         var slider_red = document.getElementById("redRange");
         var output_red = document.getElementById("redValue");
 
-        slider_red.onload = function () {
-            slider_red.value = output_red.innerHTML;
-        }
-        
+        output_red.innerHTML = slider_red.value;
+
         slider_red.oninput = function () {
             output_red.innerHTML = this.value;
         }
