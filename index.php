@@ -65,12 +65,7 @@
             output_blue.innerHTML = this.value;
         }
 
-        function rgb(r,g,b, def) {
-            def = parseInt(def, 10) || 0;
-            return 'rgb(' + [(r||def),(g||def),(b||def)].join(',') + ')';
-        }
-
-        document.getElementById("colorPreview").style.backgroundColor = CssStyle.color.rgb(slider_red.value, slider_green.value, slider_blue.value);
+        document.getElementById("colorPreview").style.backgroundColor = "rgb(" + slider_red.value + "," + slider_green.value + "," + slider_blue.value + ")";
     </script>
 </form>
 </body>
