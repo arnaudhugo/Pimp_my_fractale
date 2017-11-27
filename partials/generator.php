@@ -62,8 +62,6 @@ $temps = round(microtime(true) - $start, 3);
 
 imagestring($img, 3, 1, 1, $temps, $white);
 
-header('Content-type: image/png');
-
 imagepng($img, "../partials/fractal.png");
 
 header("Location: fractale_gen.html");
