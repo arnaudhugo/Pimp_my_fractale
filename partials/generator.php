@@ -8,8 +8,6 @@ if (isset($_POST['n']) && isset($_POST['k'])) {
     $iteration_n = 50;
 }
 
-echo $iteration_n;
-
 $min_x = -2.1; //ab min
 $max_x = 0.6; //ab max
 $min_y = -1.2; //ord min
@@ -31,6 +29,8 @@ $colors = array();
 for ($i = 0; $i < $iteration_n; $i++) {
     $colors[$i] = imagecolorallocate($img, 0, 0, $i * 255 / $iteration_n);
 }
+
+var_dump($colors);
 
 $start = microtime(true);
 
