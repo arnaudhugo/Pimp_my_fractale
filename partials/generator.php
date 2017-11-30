@@ -47,7 +47,6 @@ for ($x = 0; $x < $img_width; $x++) {
             $arg = atan2($z_i, $z_r);
             $z_r = ($mod ** $degree_k) * cos($degree_k * $arg) + $c_r;
             $z_i = ($mod ** $degree_k) * sin($degree_k * $arg) + $c_i;
-
             $i++;
         }
 
