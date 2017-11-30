@@ -41,7 +41,7 @@ for ($x = 0; $x < $img_width; $x++) {
         $z_i = 0;
         $i = 0;
 
-        while ((($z_r ** 2) + ($z_i ** 2) < 4) && $i < $iteration_n) {
+        while ((($z_r ** 2) + ($z_i ** 2) < 4) && ($i < $iteration_n)) {
 
             $mod = sqrt(($z_r ** 2) + ($z_i ** 2));
             $arg = atan2($z_i, $z_r);
