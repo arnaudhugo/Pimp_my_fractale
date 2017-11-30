@@ -44,6 +44,7 @@ session_start();
     <div class="form-group">
         <input id="buttonSub" type="submit" value="Valider">
     </div>
+    <hr style="height: 5px; color: #3498db;">
     <?php
     if ($_SESSION['active'] == 'true') {
         ?>
