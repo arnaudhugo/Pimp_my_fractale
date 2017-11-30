@@ -44,34 +44,37 @@ session_start();
     <div class="form-group">
         <input id="buttonSub" type="submit" value="Valider">
     </div>
-</form>
+    <?php
+    if ($_SESSION['active'] == 'true') {
+        ?>
 
+        <div class="form-group">
+            <p class="form-label">Fractal information: </p>
+        </div>
+        <div class="form-group">
+            <p class="form-label">Generation time: <?= $_SESSION['load_duration']; ?> seconds</p>
+        </div>
+        <div class="form-group">
+            <p class="form-label">Size: <?= $_SESSION['width']; ?>x<?= $_SESSION['height'] ?></p>
+        </div>
+        <div class="form-group">
+            <p class="form-label">Iteration: <?= $_SESSION['iteration']; ?></p>
+        </div>
+        <div class="form-group">
+            <p class="form-label">Degree: <?= $_SESSION['degree']; ?></p>
+        </div>
+        <?php
+    }
+    ?>
+</form>
 <?php
 if ($_SESSION['active'] == 'true') {
     ?>
-    <img src="partials/fractal.png">
-    <form id="form">
-        <div class="form-group">
-            <p>Fractal information: </p>
-        </div>
-        <div class="form-group">
-            <p>Generation time: <?= $_SESSION['load_duration']; ?> seconds</p>
-        </div>
-        <div class="form-group">
-            <p>Size: <?= $_SESSION['width']; ?>x<?= $_SESSION['height'] ?></p>
-        </div>
-        <div class="form-group">
-            <p>Iteration: <?= $_SESSION['iteration']; ?></p>
-        </div>
-        <div class="form-group">
-            <p>Degree: <?= $_SESSION['degree']; ?></p>
-        </div>
-    </form>
+    <img id="fractalStyle" src="partials/fractal.png">
     <?php
     $_SESSION['active'] = 'false';
 }
 ?>
-
 <script type="text/javascript" src="partials/slider.js"></script>
 <script type="text/javascript" src="partials/loading.js"></script>
 </body>
