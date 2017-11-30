@@ -32,11 +32,14 @@ for ($i = 0; $i < $iteration_n; $i++) {
 
 $start = microtime(true);
 
+$divider_x = $zoom + $min_x;
+$divider_y = $zoom + $min_y;
+
 for ($x = 0; $x < $img_width; $x++) {
     for ($y = 0; $y < $img_height; $y++) {
 
-        $c_r = $x / $zoom + $min_x;
-        $c_i = $y / $zoom + $min_y;
+        $c_r = $x / $divider_x;
+        $c_i = $y / $divider_y;
         $z_r = 0;
         $z_i = 0;
         $i = 0;
