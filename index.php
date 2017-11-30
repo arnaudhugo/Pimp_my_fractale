@@ -43,7 +43,7 @@
 </form>
 
 <?php
-if ($_SESSION['active'] == 'true') {
+//if ($_SESSION['active'] == 'true') {
     ?>
     <div id="sampleDiv" style="width: 100px; background-color: Gray;">
         <img src="partials/fractal.png">
@@ -54,8 +54,7 @@ if ($_SESSION['active'] == 'true') {
     <p>Iteration: <?= $_SESSION['iteration']; ?></p>
     <p>Degree: <?= $_SESSION['degree']; ?></p>
     <?php
-    $_SESSION['active'] = 'false';
-}
+//}
 ?>
 
 <script type="text/javascript" src="partials/slider.js"></script>
