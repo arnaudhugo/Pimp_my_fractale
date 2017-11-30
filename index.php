@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -53,11 +53,23 @@ if ($_SESSION['active'] == 'true') {
     <div id="sampleDiv" style="width: 100px; background-color: Gray;">
         <img src="partials/fractal.png">
     </div>
-    <p>Fractal information: </p>
-    <p>Generation time: <?= $_SESSION['load_duration']; ?> seconds</p>
-    <p>Size: <?= $_SESSION['width']; ?>x<?= $_SESSION['height'] ?></p>
-    <p>Iteration: <?= $_SESSION['iteration']; ?></p>
-    <p>Degree: <?= $_SESSION['degree']; ?></p>
+    <form id="form">
+        <div class="form-group">
+            <p>Fractal information: </p>
+        </div>
+        <div class="form-group">
+            <p>Generation time: <?= $_SESSION['load_duration']; ?> seconds</p>
+        </div>
+        <div class="form-group">
+            <p>Size: <?= $_SESSION['width']; ?>x<?= $_SESSION['height'] ?></p>
+        </div>
+        <div class="form-group">
+            <p>Iteration: <?= $_SESSION['iteration']; ?></p>
+        </div>
+        <div class="form-group">
+            <p>Degree: <?= $_SESSION['degree']; ?></p>
+        </div>
+    </form>
     <?php
     $_SESSION['active'] = 'false';
 }
