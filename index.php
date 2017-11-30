@@ -44,11 +44,11 @@ session_start();
     <div class="form-group">
         <input id="buttonSub" type="submit" value="Valider">
     </div>
-    <hr style="color: #3498db;">
+
     <?php
     if ($_SESSION['active'] == 'true') {
         ?>
-
+        <hr style="color: #3498db; margin-top: 5px; margin-bottom: 5px;">
         <div class="form-group">
             <p class="form-label">Fractal information: </p>
         </div>
