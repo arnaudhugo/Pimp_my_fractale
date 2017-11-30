@@ -59,6 +59,7 @@ if ($_SESSION['active'] == 'true') {
     <p>Iteration: <?= $_SESSION['iteration']; ?></p>
     <p>Degree: <?= $_SESSION['degree']; ?></p>
     <?php
+    $_SESSION['active'] = 'false';
 }
 ?>
 
