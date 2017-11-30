@@ -47,20 +47,22 @@ session_start();
     <?php
     if ($_SESSION['active'] == 'true') {
         ?>
-        <div class="form-group">
-            <p class="form-label">Fractal information: </p>
-        </div>
-        <div class="form-group">
-            <p class="form-label">Generation time: <?= $_SESSION['load_duration']; ?> seconds</p>
-        </div>
-        <div class="form-group">
-            <p class="form-label">Size: <?= $_SESSION['width']; ?>x<?= $_SESSION['height'] ?></p>
-        </div>
-        <div class="form-group">
-            <p class="form-label">Iteration: <?= $_SESSION['iteration']; ?></p>
-        </div>
-        <div class="form-group">
-            <p class="form-label">Degree: <?= $_SESSION['degree']; ?></p>
+        <div style="border: 1px solid white">
+            <div class="form-group">
+                <p class="form-label">Fractal information: </p>
+            </div>
+            <div class="form-group">
+                <p class="form-label">Generation time: <?= $_SESSION['load_duration']; ?> seconds</p>
+            </div>
+            <div class="form-group">
+                <p class="form-label">Size: <?= $_SESSION['width']; ?>x<?= $_SESSION['height'] ?></p>
+            </div>
+            <div class="form-group">
+                <p class="form-label">Iteration: <?= $_SESSION['iteration']; ?></p>
+            </div>
+            <div class="form-group">
+                <p class="form-label">Degree: <?= $_SESSION['degree']; ?></p>
+            </div>
         </div>
         <?php
     }
