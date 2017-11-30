@@ -43,10 +43,10 @@ for ($x = 0; $x < $img_width; $x++) {
 
         while ((($z_r ** 2) + ($z_i ** 2) < 4) && ($i < $iteration_n)) {
 
-            $mod = sqrt(($z_r ** 2) + ($z_i ** 2));
-            $arg = atan2($z_i, $z_r);
-            $z_r = ($mod ** $degree_k) * cos($degree_k * $arg) + $c_r;
-            $z_i = ($mod ** $degree_k) * sin($degree_k * $arg) + $c_i;
+            $mod_k = (sqrt(($z_r ** 2) + ($z_i ** 2))) ** $degree_k;
+            $arg_k = atan2($z_i, $z_r) * $degree_k;
+            $z_r = ($mod_k) * cos($arg_k) + $c_r;
+            $z_i = ($mod_k) * sin($arg_k) + $c_i;
             $i++;
         }
 
