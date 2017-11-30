@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $iteration_n = ((isset($_POST['n'])) ? $_POST['n'] : 50);
 $degree_k = ((isset($_POST['k'])) ? $_POST['k'] : 2);
@@ -59,12 +60,16 @@ for ($x = 0; $x < $img_width; $x++) {
 }
 
 $temps = round(microtime(true) - $start, 3);
-
-imagestring($img, 3, 1, 1, $temps, $white);
-
 imagepng($img, "fractal.png");
 
+$_SESSION['iteration'] = $iteration_n;
+$_SESSION['degree'] = $degree_k;
+$_SESSION['width'] = $img_width;
+$_SESSION['height'] = $img_height;
+$_SESSION['load_duration'] = $temps;
+
+
 sleep(3);
-header("Location: fractale_gen.html");
+header("Location: fractale_gen.php");
 
 
