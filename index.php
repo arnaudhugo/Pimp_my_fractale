@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -43,8 +47,7 @@
 </form>
 
 <?php
-//if ($_SESSION['active'] == 'true') {
-var_dump($_SESSION);
+if ($_SESSION['active'] == 'true') {
     ?>
     <div id="sampleDiv" style="width: 100px; background-color: Gray;">
         <img src="partials/fractal.png">
@@ -55,7 +58,7 @@ var_dump($_SESSION);
     <p>Iteration: <?= $_SESSION['iteration']; ?></p>
     <p>Degree: <?= $_SESSION['degree']; ?></p>
     <?php
-//}
+}
 ?>
 
 <script type="text/javascript" src="partials/slider.js"></script>
