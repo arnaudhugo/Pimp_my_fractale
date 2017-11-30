@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Geo" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
 </head>
 <body>
 <div id="load" class="loader"></div>
