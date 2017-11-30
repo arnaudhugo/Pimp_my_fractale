@@ -35,8 +35,8 @@ $start = microtime(true);
 for ($x = 0; $x < $img_width; $x++) {
     for ($y = 0; $y < $img_height; $y++) {
 
-        $c_r = $x / $zoom + $min_x;
-        $c_i = $y / $zoom + $min_y;
+        $c_r = ($x / $zoom) + $min_x;
+        $c_i = ($y / $zoom) + $min_y;
         $z_r = 0;
         $z_i = 0;
         $i = 0;
