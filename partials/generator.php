@@ -62,12 +62,13 @@ for ($x = 0; $x < $img_width; $x++) {
 $temps = round(microtime(true) - $start, 3);
 imagepng($img, "fractal.png");
 
+$_SESSION['active'] = 'true';
 $_SESSION['iteration'] = $iteration_n;
 $_SESSION['degree'] = $degree_k;
 $_SESSION['width'] = $img_width;
 $_SESSION['height'] = $img_height;
 $_SESSION['load_duration'] = $temps;
-$_SESSION['active'] = 'true';
+
 
 sleep(3);
 header("Location: ../index.php");

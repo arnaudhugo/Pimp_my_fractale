@@ -44,6 +44,7 @@
 
 <?php
 //if ($_SESSION['active'] == 'true') {
+var_dump($_SESSION);
     ?>
     <div id="sampleDiv" style="width: 100px; background-color: Gray;">
         <img src="partials/fractal.png">
